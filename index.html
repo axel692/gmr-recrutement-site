@@ -20,56 +20,41 @@ body {
 nav {
   position: sticky;
   top: 0;
-  background: rgba(248,247,244,0.9);
-  backdrop-filter: blur(8px);
+  background: white;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #111;
-  margin-left: 20px;
-  font-weight: 500;
+  border-bottom: 1px solid #eee;
 }
 
 /* HERO */
 .hero {
-  text-align: center;
   padding: 120px 20px 80px;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .hero h1 {
   font-size: 52px;
-  max-width: 800px;
-  margin: auto;
+  line-height: 1.2;
 }
 
 .hero p {
   color: #555;
-  max-width: 600px;
-  margin: 20px auto;
+  margin-top: 20px;
+  font-size: 18px;
 }
 
-/* BUTTON */
+/* CTA */
 .btn {
   display: inline-block;
+  margin-top: 30px;
   padding: 14px 26px;
-  border-radius: 8px;
-  margin-top: 20px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.btn-primary {
   background: #111;
   color: white;
-}
-
-.btn-outline {
-  border: 1px solid #ccc;
-  color: #111;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 /* SECTION */
@@ -82,8 +67,8 @@ nav a {
 /* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 25px;
 }
 
 /* CARD */
@@ -92,23 +77,13 @@ nav a {
   padding: 30px;
   border-radius: 12px;
   border: 1px solid #eee;
-  transition: 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* ANIMATION */
-.fade {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 0.6s;
-}
-
-.fade.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* ABOUT */
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
 }
 
 /* CALENDLY */
@@ -129,70 +104,117 @@ footer {
 <body>
 
 <nav>
-  <div><strong>GMR Talent</strong></div>
+  <strong>GMR Talent</strong>
   <div>
     <a href="#services">Services</a>
+    <a href="#about">À propos</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <section class="hero">
   <h1>Recrutez les bons profils.<br>Pas juste des CV.</h1>
+  
   <p>
-    Recruteur indépendant spécialisé Retail & Grande Distribution.
-    J’accompagne les entreprises dans leurs recrutements stratégiques.
+    Je suis Axel Gromer, recruteur indépendant spécialisé retail & grande distribution.
+    J’accompagne les entreprises dans leurs recrutements clés avec une approche terrain,
+    rapide et orientée résultats.
   </p>
 
-  <div class="btn btn-primary" onclick="scrollToCalendly()">
-    Prendre rendez-vous
-  </div>
+  <a href="#contact" class="btn">Prendre rendez-vous</a>
 </section>
 
+<!-- SERVICES -->
 <section id="services" class="section">
   <h2>Mes services</h2>
 
   <div class="grid">
-    <div class="card fade">
+    <div class="card">
       <h3>Recrutement au succès</h3>
-      <p>Des profils ciblés, validés, prêts à performer.</p>
+      <p>
+        Identification, approche et sélection de profils qualifiés.
+        Vous ne payez que si le recrutement est finalisé.
+      </p>
     </div>
 
-    <div class="card fade">
+    <div class="card">
       <h3>RPO</h3>
-      <p>Externalisez votre recrutement avec un expert intégré.</p>
+      <p>
+        Externalisation de votre recrutement.
+        Je m’intègre directement à vos équipes pour gérer vos besoins.
+      </p>
     </div>
 
-    <div class="card fade">
+    <div class="card">
       <h3>Conseil</h3>
-      <p>Optimisation de vos process et expérience candidat.</p>
+      <p>
+        Optimisation de vos process de recrutement et amélioration de votre expérience candidat.
+      </p>
     </div>
   </div>
 </section>
 
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>À propos</h2>
+
+  <div class="about">
+    <div>
+      <p>
+        Avec plus de 6 ans d’expérience en recrutement et 4 ans sur le terrain en retail,
+        je comprends à la fois les enjeux opérationnels et humains des entreprises.
+      </p>
+
+      <p>
+        Mon approche repose sur la qualité plutôt que le volume :
+        moins de CV, mais des profils réellement adaptés à vos besoins.
+      </p>
+    </div>
+
+    <div>
+      <p>
+        J’ai accompagné des équipes de 5 à plus de 60 collaborateurs,
+        avec un focus sur la performance, la cohésion et les résultats.
+      </p>
+
+      <p>
+        Aujourd’hui, j’aide les entreprises à structurer et accélérer leur recrutement.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
 <section class="section">
-  <h2>Pourquoi travailler avec moi</h2>
+  <h2>Comment je travaille</h2>
 
   <div class="grid">
-    <div class="card fade">
-      <h3>Double expertise</h3>
-      <p>6 ans recrutement + 4 ans terrain retail.</p>
+    <div class="card">
+      <h3>1. Analyse</h3>
+      <p>Compréhension de votre besoin et de votre environnement.</p>
     </div>
 
-    <div class="card fade">
-      <h3>Efficacité</h3>
-      <p>Moins de volume, plus de pertinence.</p>
+    <div class="card">
+      <h3>2. Sourcing</h3>
+      <p>Recherche et approche des profils pertinents.</p>
     </div>
 
-    <div class="card fade">
-      <h3>Flexibilité</h3>
-      <p>Mission ponctuelle ou accompagnement long terme.</p>
+    <div class="card">
+      <h3>3. Sélection</h3>
+      <p>Présentation de candidats qualifiés uniquement.</p>
+    </div>
+
+    <div class="card">
+      <h3>4. Suivi</h3>
+      <p>Accompagnement jusqu’à l’intégration du candidat.</p>
     </div>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="section">
   <h2>Prendre rendez-vous</h2>
-  <p>Choisissez directement un créneau :</p>
+  <p>Discutons de vos besoins en recrutement :</p>
 
   <div id="calendly"></div>
 </section>
@@ -202,31 +224,10 @@ footer {
 </footer>
 
 <script>
-/* ANIMATION */
-const elements = document.querySelectorAll('.fade');
-
-function reveal() {
-  elements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if(rect.top < window.innerHeight - 100){
-      el.classList.add('visible');
-    }
-  });
-}
-
-window.addEventListener('scroll', reveal);
-reveal();
-
-/* CALENDLY */
 Calendly.initInlineWidget({
   url: 'https://calendly.com/axelgrmr/30min',
   parentElement: document.getElementById('calendly')
 });
-
-/* SCROLL */
-function scrollToCalendly(){
-  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
-}
 </script>
 
 </body>
