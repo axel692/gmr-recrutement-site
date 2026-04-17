@@ -16,7 +16,7 @@ body {
   color: #1a1a1a;
 }
 
-/* NAVBAR */
+/* NAV */
 .nav {
   position: sticky;
   top: 0;
@@ -25,12 +25,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  z-index: 1000;
 }
 
 .logo {
   font-weight: 600;
-  font-size: 18px;
 }
 
 .nav-center {
@@ -44,12 +42,6 @@ body {
 .nav-center a {
   color: white;
   text-decoration: none;
-  font-size: 14px;
-  opacity: 0.9;
-}
-
-.nav-center a:hover {
-  opacity: 1;
 }
 
 .cta {
@@ -58,98 +50,48 @@ body {
   padding: 12px 20px;
   border-radius: 999px;
   text-decoration: none;
-  font-weight: 500;
 }
 
-.cta:hover {
-  background: #a94700;
-}
-
-/* CONTAINER */
+/* LAYOUT */
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 80px 20px;
 }
 
-/* HERO */
-.hero h1 {
-  font-size: 52px;
-  line-height: 1.2;
-}
-
-.hero p {
-  color: #555;
-  font-size: 18px;
-  margin-top: 20px;
-  max-width: 700px;
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 26px;
-  background: #1a1a1a;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.btn:hover {
-  background: #333;
-}
-
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 25px;
-}
-
-/* CARD */
-.card {
+/* FORM */
+.form {
+  margin-top: 50px;
   background: white;
   padding: 30px;
   border-radius: 12px;
   border: 1px solid #eee;
-  transition: 0.2s;
 }
 
-.card:hover {
-  transform: translateY(-4px);
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
-/* KPI */
-.kpi {
-  font-size: 30px;
-  font-weight: bold;
+.form input {
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  width: 100%;
 }
 
-/* TITLES */
-.section-title {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-/* TEXT */
-.highlight {
+.form button {
+  margin-top: 20px;
+  padding: 14px;
+  width: 100%;
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 8px;
   font-weight: 600;
-  color: #333;
-}
-
-/* CALENDLY */
-#calendly {
-  margin-top: 40px;
-  height: 700px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 40px;
-  color: #777;
+  cursor: pointer;
 }
 </style>
 </head>
@@ -168,91 +110,29 @@ footer {
   <a href="#contact" class="cta">Prendre rendez-vous</a>
 </nav>
 
-<section class="container hero">
-  <h1>
-    Je structure vos recrutements.<br>
-    Et je vous aide à construire des équipes performantes.
-  </h1>
-
-  <p>
-    Talent Acquisition & People Experience Specialist avec ADN retail.
-    J’accompagne les entreprises dans des contextes exigeants :
-    ouvertures de boutiques, flagship, recrutements sensibles et multi-sites.
-  </p>
-
-  <a href="#contact" class="btn">Prendre rendez-vous</a>
-</section>
-
-<section id="impact" class="container">
-  <h2 class="section-title">Impact mesurable</h2>
-
-  <div class="grid">
-    <div class="card">
-      <div class="kpi">-22%</div>
-      <p>de time-to-hire grâce à la structuration des process</p>
-    </div>
-
-    <div class="card">
-      <div class="kpi">+38%</div>
-      <p>de candidatures qualifiées générées</p>
-    </div>
-
-    <div class="card">
-      <div class="kpi">50+</div>
-      <p>collaborateurs managés en flagship international</p>
-    </div>
-  </div>
-</section>
-
-<section id="services" class="container">
-  <h2 class="section-title">Interventions</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Recrutement stratégique</h3>
-      <p>Profils terrain et opérationnels dans des environnements exigeants.</p>
-    </div>
-
-    <div class="card">
-      <h3>Ouverture & scaling</h3>
-      <p>Recrutement en volume et structuration lors d’ouvertures de boutiques.</p>
-    </div>
-
-    <div class="card">
-      <h3>Structuration RH</h3>
-      <p>Mise en place de process, scorecards et formation managers.</p>
-    </div>
-  </div>
-</section>
-
-<section class="container">
-  <h2 class="section-title">Mon approche</h2>
-
-  <p>
-    J’ai évolué à la fois côté terrain et côté recrutement.
-    J’ai managé jusqu’à 50 collaborateurs en flagship à Montréal,
-    avec un pilotage direct de la performance.
-  </p>
-
-  <p>
-    Aujourd’hui, j’apporte une approche orientée business :
-    comprendre vos enjeux opérationnels pour recruter efficacement.
-  </p>
-
-  <p class="highlight">
-    Résultat : moins de CV, plus de profils pertinents.
-  </p>
-</section>
-
 <section id="contact" class="container">
-  <h2 class="section-title">Discutons de votre recrutement</h2>
+  <h2>Discutons de votre recrutement</h2>
 
+  <!-- Calendly -->
   <div id="calendly"></div>
-</section>
 
-<footer>
-  © GMR Recrutement — Axel Gromer
-</footer>
+  <!-- FORMULAIRE -->
+  <div class="form">
+    <h3>Ou laissez-moi vos coordonnées</h3>
+
+    <form>
+      <div class="form-grid">
+        <input type="text" placeholder="Prénom" required>
+        <input type="text" placeholder="Nom" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Téléphone">
+        <input type="text" placeholder="Entreprise" style="grid-column: span 2;">
+      </div>
+
+      <button type="submit">Être recontacté</button>
+    </form>
+  </div>
+</section>
 
 <script>
 Calendly.initInlineWidget({
