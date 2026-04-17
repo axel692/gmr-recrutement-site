@@ -95,6 +95,55 @@ body {
   border: 1px solid #eee;
 }
 
+/* IMPACT */
+.kpi {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 16px;
+}
+
+/* TITLES */
+.section-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* PROCESS */
+.process {
+  margin-top: 40px;
+}
+
+.step {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.step-number {
+  font-size: 40px;
+  color: #b0c4cf;
+  font-weight: bold;
+  min-width: 60px;
+}
+
+.step h3 {
+  margin: 0;
+}
+
+.step p {
+  margin: 5px 0 0;
+  color: #666;
+}
+
+/* CALENDLY */
+#calendly {
+  margin-top: 40px;
+  height: 900px;
+}
+
 /* FORM */
 .form {
   margin-top: 50px;
@@ -134,7 +183,7 @@ body {
   <div class="logo">GMR Recrutement</div>
 
   <div class="nav-center">
-    <a href="#services">Services</a>
+    <a href="#process">Approche</a>
     <a href="#impact">Impact</a>
     <a href="#contact">Contact</a>
   </div>
@@ -151,26 +200,73 @@ body {
   <a href="#contact" class="btn">Prendre rendez-vous</a>
 </section>
 
+<!-- IMPACT -->
 <section id="impact" class="container">
-  <h2>Impact mesurable</h2>
+  <h2 class="section-title">Impact mesurable</h2>
+
   <div class="grid">
-    <div class="card"><strong>-22%</strong><p>time-to-hire</p></div>
-    <div class="card"><strong>+38%</strong><p>candidats qualifiés</p></div>
-    <div class="card"><strong>50+</strong><p>collaborateurs managés</p></div>
+    <div class="card">
+      <div class="kpi">-22%</div>
+      <p>de time-to-hire</p>
+    </div>
+
+    <div class="card">
+      <div class="kpi">+38%</div>
+      <p>candidatures qualifiées</p>
+    </div>
+
+    <div class="card">
+      <div class="kpi">50+</div>
+      <p>collaborateurs managés</p>
+    </div>
   </div>
 </section>
 
-<section id="services" class="container">
-  <h2>Services</h2>
-  <div class="grid">
-    <div class="card"><h3>Recrutement</h3><p>Profils retail & opérationnels</p></div>
-    <div class="card"><h3>Ouverture</h3><p>Recrutement en volume</p></div>
-    <div class="card"><h3>Structuration</h3><p>Process & performance</p></div>
+<!-- PROCESS -->
+<section id="process" class="container">
+  <h2 class="section-title">Comment ça marche</h2>
+  <p style="color:#666;">Un processus clair, des délais tenus, un engagement de confidentialité.</p>
+
+  <div class="process">
+
+    <div class="step">
+      <div class="step-number">01</div>
+      <div>
+        <h3>Brief</h3>
+        <p>Échange de 30 min pour comprendre votre besoin et vos enjeux.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">02</div>
+      <div>
+        <h3>Sourcing</h3>
+        <p>Recherche active via réseau et approche directe ciblée.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">03</div>
+      <div>
+        <h3>Présentation</h3>
+        <p>Shortlist qualifiée sous 7 à 10 jours.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="step-number">04</div>
+      <div>
+        <h3>Intégration</h3>
+        <p>Suivi jusqu’à la prise de poste et au-delà.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="container">
-  <h2>Contact</h2>
+  <h2 class="section-title">Contact</h2>
 
   <div id="calendly"></div>
 
