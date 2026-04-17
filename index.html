@@ -16,7 +16,6 @@ body {
   color: #111;
 }
 
-/* NAV */
 nav {
   position: sticky;
   top: 0;
@@ -27,25 +26,24 @@ nav {
   border-bottom: 1px solid #eee;
 }
 
-/* HERO */
-.hero {
-  padding: 120px 20px 80px;
-  max-width: 1000px;
+.container {
+  max-width: 1100px;
   margin: auto;
+  padding: 80px 20px;
 }
 
 .hero h1 {
-  font-size: 52px;
+  font-size: 54px;
   line-height: 1.2;
 }
 
 .hero p {
   color: #555;
-  margin-top: 20px;
   font-size: 18px;
+  margin-top: 20px;
+  max-width: 700px;
 }
 
-/* CTA */
 .btn {
   display: inline-block;
   margin-top: 30px;
@@ -57,21 +55,12 @@ nav {
   font-weight: 600;
 }
 
-/* SECTION */
-.section {
-  max-width: 1100px;
-  margin: auto;
-  padding: 80px 20px;
-}
-
-/* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
   gap: 25px;
 }
 
-/* CARD */
 .card {
   background: white;
   padding: 30px;
@@ -79,24 +68,23 @@ nav {
   border: 1px solid #eee;
 }
 
-/* ABOUT */
-.about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
+.highlight {
+  font-weight: bold;
 }
 
-/* CALENDLY */
+.kpi {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
 #calendly {
   margin-top: 40px;
   height: 700px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 40px;
-  color: #777;
 }
 </style>
 </head>
@@ -107,121 +95,129 @@ footer {
   <strong>GMR Talent</strong>
   <div>
     <a href="#services">Services</a>
-    <a href="#about">À propos</a>
+    <a href="#impact">Impact</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
 
-<section class="hero">
-  <h1>Recrutez les bons profils.<br>Pas juste des CV.</h1>
-  
+<section class="container hero">
+  <h1>
+    Je structure vos recrutements.<br>
+    Et je vous aide à construire des équipes qui performent.
+  </h1>
+
   <p>
-    Je suis Axel Gromer, recruteur indépendant spécialisé retail & grande distribution.
-    J’accompagne les entreprises dans leurs recrutements clés avec une approche terrain,
-    rapide et orientée résultats.
+    Talent Acquisition & People Experience Specialist avec ADN retail.
+    J’accompagne les entreprises dans des contextes exigeants :
+    ouvertures de boutiques, flagship, recrutements sensibles et multi-sites.
   </p>
 
   <a href="#contact" class="btn">Prendre rendez-vous</a>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="section">
-  <h2>Mes services</h2>
+<!-- IMPACT -->
+<section id="impact" class="container">
+  <h2 class="section-title">Impact mesurable</h2>
 
   <div class="grid">
     <div class="card">
-      <h3>Recrutement au succès</h3>
+      <div class="kpi">-22%</div>
+      <p>de time-to-hire grâce à la structuration des process :contentReference[oaicite:0]{index=0}</p>
+    </div>
+
+    <div class="card">
+      <div class="kpi">+38%</div>
+      <p>de candidatures qualifiées générées :contentReference[oaicite:1]{index=1}</p>
+    </div>
+
+    <div class="card">
+      <div class="kpi">50+</div>
+      <p>collaborateurs managés en flagship international</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="container">
+  <h2 class="section-title">Interventions</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Recrutement stratégique</h3>
       <p>
-        Identification, approche et sélection de profils qualifiés.
-        Vous ne payez que si le recrutement est finalisé.
+        Profils terrain et opérationnels, dans des environnements retail exigeants.
       </p>
     </div>
 
     <div class="card">
-      <h3>RPO</h3>
+      <h3>Ouverture & scaling</h3>
       <p>
-        Externalisation de votre recrutement.
-        Je m’intègre directement à vos équipes pour gérer vos besoins.
+        Recrutement en volume et structuration lors d’ouvertures de boutiques.
       </p>
     </div>
 
     <div class="card">
-      <h3>Conseil</h3>
+      <h3>Structuration RH</h3>
       <p>
-        Optimisation de vos process de recrutement et amélioration de votre expérience candidat.
+        Mise en place de scorecards, process, onboarding et formation managers.
       </p>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
-  <h2>À propos</h2>
+<!-- STORY -->
+<section class="container">
+  <h2 class="section-title">Mon approche</h2>
 
-  <div class="about">
-    <div>
-      <p>
-        Avec plus de 6 ans d’expérience en recrutement et 4 ans sur le terrain en retail,
-        je comprends à la fois les enjeux opérationnels et humains des entreprises.
-      </p>
+  <p>
+    J’ai évolué à la fois côté terrain et côté recrutement.
+    J’ai managé jusqu’à 50 collaborateurs en flagship à Montréal,
+    tout en pilotant la performance commerciale et les KPIs.
+  </p>
 
-      <p>
-        Mon approche repose sur la qualité plutôt que le volume :
-        moins de CV, mais des profils réellement adaptés à vos besoins.
-      </p>
-    </div>
+  <p>
+    Aujourd’hui, j’apporte cette double lecture :
+    comprendre le business, pas uniquement le recrutement.
+  </p>
 
-    <div>
-      <p>
-        J’ai accompagné des équipes de 5 à plus de 60 collaborateurs,
-        avec un focus sur la performance, la cohésion et les résultats.
-      </p>
-
-      <p>
-        Aujourd’hui, j’aide les entreprises à structurer et accélérer leur recrutement.
-      </p>
-    </div>
-  </div>
+  <p class="highlight">
+    Résultat : moins de volume, plus de précision.
+  </p>
 </section>
 
 <!-- PROCESS -->
-<section class="section">
-  <h2>Comment je travaille</h2>
+<section class="container">
+  <h2 class="section-title">Méthode</h2>
 
   <div class="grid">
     <div class="card">
-      <h3>1. Analyse</h3>
-      <p>Compréhension de votre besoin et de votre environnement.</p>
+      <h3>Analyse</h3>
+      <p>Compréhension du besoin et des enjeux business.</p>
     </div>
 
     <div class="card">
-      <h3>2. Sourcing</h3>
-      <p>Recherche et approche des profils pertinents.</p>
+      <h3>Sourcing ciblé</h3>
+      <p>Approche directe des profils pertinents.</p>
     </div>
 
     <div class="card">
-      <h3>3. Sélection</h3>
-      <p>Présentation de candidats qualifiés uniquement.</p>
+      <h3>Évaluation</h3>
+      <p>Entretiens structurés et scorecards.</p>
     </div>
 
     <div class="card">
-      <h3>4. Suivi</h3>
-      <p>Accompagnement jusqu’à l’intégration du candidat.</p>
+      <h3>Closing</h3>
+      <p>Accompagnement jusqu’à l’intégration.</p>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
-  <h2>Prendre rendez-vous</h2>
-  <p>Discutons de vos besoins en recrutement :</p>
+<section id="contact" class="container">
+  <h2 class="section-title">Discutons de votre recrutement</h2>
 
   <div id="calendly"></div>
 </section>
-
-<footer>
-  © GMR Talent — Axel Gromer
-</footer>
 
 <script>
 Calendly.initInlineWidget({
