@@ -1,10 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <title>GMR Talent</title>
+  <meta charset="UTF-8">
+  <title>GMR Talent - Recrutement Retail</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0a0a0a;
+      color: white;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #b3b3b3;
+      line-height: 1.6;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 25px;
+      background: white;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .section {
+      margin-top: 80px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #111;
+      padding: 25px;
+      border-radius: 12px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 80px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>GMR Talent</h1>
-  <p>Recruteur indépendant - Retail & Grande distribution</p>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1>GMR Talent</h1>
+      <p>Recruteur indépendant spécialisé Retail & Grande Distribution</p>
+      <p>Je vous aide à recruter vite, bien, et durablement.</p>
+
+      <a class="btn" href="https://calendly.com/axelgrmr/30min" target="_blank">
+        Prendre rendez-vous
+      </a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section container">
+    <h2>Mes services</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Recrutement au succès</h3>
+        <p>Je vous accompagne sur vos recrutements clés avec un engagement de résultat.</p>
+      </div>
+
+      <div class="card">
+        <h3>RPO (externalisation)</h3>
+        <p>Je prends en charge tout ou partie de votre recrutement en immersion.</p>
+      </div>
+
+      <div class="card">
+        <h3>Conseil & structuration</h3>
+        <p>Optimisation de vos process, amélioration de l’expérience candidat et marque employeur.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE -->
+  <section class="section container">
+    <h2>Pourquoi travailler avec moi ?</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Terrain + recrutement</h3>
+        <p>4 ans en boutique + 6 ans en recrutement : je comprends vos enjeux business.</p>
+      </div>
+
+      <div class="card">
+        <h3>Approche rapide & qualitative</h3>
+        <p>Moins de CV inutiles, plus de profils pertinents.</p>
+      </div>
+
+      <div class="card">
+        <h3>Flexibilité totale</h3>
+        <p>Mission ponctuelle ou accompagnement long terme.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section container" style="text-align:center;">
+    <h2>Un besoin en recrutement ?</h2>
+    <p>Discutons de votre contexte et trouvons les bons profils ensemble.</p>
+
+    <a class="btn" href="https://calendly.com/axelgrmr/30min" target="_blank">
+      Réserver un créneau
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © GMR Talent — Axel Gromer
+  </div>
+
 </body>
 </html>
