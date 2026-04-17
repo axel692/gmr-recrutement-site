@@ -16,7 +16,7 @@ body {
   color: #1a1a1a;
 }
 
-/* NAV */
+/* NAVBAR */
 .nav {
   position: sticky;
   top: 0;
@@ -59,6 +59,42 @@ body {
   padding: 80px 20px;
 }
 
+/* HERO */
+.hero h1 {
+  font-size: 52px;
+}
+
+.hero p {
+  color: #555;
+  max-width: 700px;
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 30px;
+  padding: 14px 26px;
+  background: #1a1a1a;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
 /* FORM */
 .form {
   margin-top: 50px;
@@ -78,8 +114,6 @@ body {
   padding: 14px;
   border-radius: 8px;
   border: 1px solid #ddd;
-  font-size: 14px;
-  width: 100%;
 }
 
 .form button {
@@ -88,10 +122,8 @@ body {
   width: 100%;
   background: #1a1a1a;
   color: white;
-  border: none;
   border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
+  border: none;
 }
 </style>
 </head>
@@ -110,23 +142,48 @@ body {
   <a href="#contact" class="cta">Prendre rendez-vous</a>
 </nav>
 
-<section id="contact" class="container">
-  <h2>Discutons de votre recrutement</h2>
+<section class="container hero">
+  <h1>Je structure vos recrutements et vos équipes.</h1>
+  <p>
+    Spécialiste du recrutement retail, j’interviens sur des environnements exigeants :
+    flagship, ouvertures et croissance multi-sites.
+  </p>
+  <a href="#contact" class="btn">Prendre rendez-vous</a>
+</section>
 
-  <!-- Calendly -->
+<section id="impact" class="container">
+  <h2>Impact mesurable</h2>
+  <div class="grid">
+    <div class="card"><strong>-22%</strong><p>time-to-hire</p></div>
+    <div class="card"><strong>+38%</strong><p>candidats qualifiés</p></div>
+    <div class="card"><strong>50+</strong><p>collaborateurs managés</p></div>
+  </div>
+</section>
+
+<section id="services" class="container">
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card"><h3>Recrutement</h3><p>Profils retail & opérationnels</p></div>
+    <div class="card"><h3>Ouverture</h3><p>Recrutement en volume</p></div>
+    <div class="card"><h3>Structuration</h3><p>Process & performance</p></div>
+  </div>
+</section>
+
+<section id="contact" class="container">
+  <h2>Contact</h2>
+
   <div id="calendly"></div>
 
-  <!-- FORMULAIRE -->
   <div class="form">
-    <h3>Ou laissez-moi vos coordonnées</h3>
+    <h3>Ou laissez vos coordonnées</h3>
 
-    <form>
+    <form action="https://formspree.io/f/TON_ID" method="POST">
       <div class="form-grid">
-        <input type="text" placeholder="Prénom" required>
-        <input type="text" placeholder="Nom" required>
-        <input type="email" placeholder="Email" required>
-        <input type="tel" placeholder="Téléphone">
-        <input type="text" placeholder="Entreprise" style="grid-column: span 2;">
+        <input type="text" name="prenom" placeholder="Prénom" required>
+        <input type="text" name="nom" placeholder="Nom" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="tel" name="telephone" placeholder="Téléphone">
+        <input type="text" name="entreprise" placeholder="Entreprise" style="grid-column: span 2;">
       </div>
 
       <button type="submit">Être recontacté</button>
