@@ -9,36 +9,70 @@
 <script src="https://assets.calendly.com/assets/external/widget.js"></script>
 
 <style>
-/* FIX NAV LINKS */
-nav a {
+body {
+  margin: 0;
+  font-family: -apple-system, sans-serif;
+  background: #f8f7f4;
   color: #1a1a1a;
+}
+
+/* NAVBAR */
+.nav {
+  position: sticky;
+  top: 0;
+  background: #f8f7f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.nav-center {
+  background: #2c2c2c;
+  padding: 10px 20px;
+  border-radius: 999px;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-center a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.nav-center a:hover {
+  opacity: 1;
+}
+
+.cta {
+  background: #c55200;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 999px;
   text-decoration: none;
   font-weight: 500;
 }
 
-nav a:hover {
-  color: #555;
-}
-}
-
-/* NAV */
-nav {
-  position: sticky;
-  top: 0;
-  background: #ffffff;
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #eee;
+.cta:hover {
+  background: #a94700;
 }
 
-/* HERO */
+/* CONTAINER */
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 80px 20px;
 }
 
+/* HERO */
 .hero h1 {
   font-size: 52px;
   line-height: 1.2;
@@ -61,7 +95,6 @@ nav {
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.2s;
 }
 
 .btn:hover {
@@ -77,7 +110,7 @@ nav {
 
 /* CARD */
 .card {
-  background: #ffffff;
+  background: white;
   padding: 30px;
   border-radius: 12px;
   border: 1px solid #eee;
@@ -92,7 +125,6 @@ nav {
 .kpi {
   font-size: 30px;
   font-weight: bold;
-  color: #1a1a1a;
 }
 
 /* TITLES */
@@ -101,10 +133,10 @@ nav {
   margin-bottom: 20px;
 }
 
-/* TEXT ACCENT */
+/* TEXT */
 .highlight {
-  color: #3a3a3a;
   font-weight: 600;
+  color: #333;
 }
 
 /* CALENDLY */
@@ -112,23 +144,34 @@ nav {
   margin-top: 40px;
   height: 700px;
 }
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #777;
+}
 </style>
 </head>
 
 <body>
 
-<nav>
-  <strong>GMR Recrutement</strong>
-  <div>
+<nav class="nav">
+  <div class="logo">GMR Recrutement</div>
+
+  <div class="nav-center">
     <a href="#services">Services</a>
     <a href="#impact">Impact</a>
     <a href="#contact">Contact</a>
   </div>
+
+  <a href="#contact" class="cta">Prendre rendez-vous</a>
 </nav>
 
 <section class="container hero">
   <h1>
     Je structure vos recrutements.<br>
+    Et je vous aide à construire des équipes performantes.
   </h1>
 
   <p>
@@ -140,7 +183,6 @@ nav {
   <a href="#contact" class="btn">Prendre rendez-vous</a>
 </section>
 
-<!-- IMPACT -->
 <section id="impact" class="container">
   <h2 class="section-title">Impact mesurable</h2>
 
@@ -162,7 +204,6 @@ nav {
   </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services" class="container">
   <h2 class="section-title">Interventions</h2>
 
@@ -184,32 +225,34 @@ nav {
   </div>
 </section>
 
-<!-- STORY -->
 <section class="container">
   <h2 class="section-title">Mon approche</h2>
 
   <p>
     J’ai évolué à la fois côté terrain et côté recrutement.
     J’ai managé jusqu’à 50 collaborateurs en flagship à Montréal,
-    tout en pilotant la performance commerciale et les KPIs.
+    avec un pilotage direct de la performance.
   </p>
 
   <p>
-    Aujourd’hui, j’apporte cette double lecture :
-    comprendre le business, pas uniquement le recrutement.
+    Aujourd’hui, j’apporte une approche orientée business :
+    comprendre vos enjeux opérationnels pour recruter efficacement.
   </p>
 
   <p class="highlight">
-    Résultat : moins de volume, plus de précision.
+    Résultat : moins de CV, plus de profils pertinents.
   </p>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="container">
   <h2 class="section-title">Discutons de votre recrutement</h2>
 
   <div id="calendly"></div>
 </section>
+
+<footer>
+  © GMR Recrutement — Axel Gromer
+</footer>
 
 <script>
 Calendly.initInlineWidget({
