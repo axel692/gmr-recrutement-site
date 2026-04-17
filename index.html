@@ -1,235 +1,192 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>GMR Talent</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GMR Talent</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #0b0b0b;
-      color: white;
-    }
+<!-- Calendly -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js"></script>
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 80px 20px;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: -apple-system, sans-serif;
+  background: #0a0a0a;
+  color: white;
+  scroll-behavior: smooth;
+}
 
-    h1 {
-      font-size: 56px;
-      line-height: 1.1;
-    }
+/* NAV */
+nav {
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
 
-    h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
 
-    p {
-      color: #a0a0a0;
-      line-height: 1.6;
-      font-size: 18px;
-    }
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 14px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 20px;
-    }
+.hero h1 {
+  font-size: 60px;
+  max-width: 800px;
+}
 
-    .btn-primary {
-      background: white;
-      color: black;
-    }
+.hero p {
+  color: #aaa;
+  margin-top: 20px;
+}
 
-    .btn-outline {
-      border: 1px solid #444;
-      color: white;
-    }
+/* BUTTON */
+.btn {
+  margin-top: 30px;
+  padding: 14px 28px;
+  background: white;
+  color: black;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+}
 
-    .hero {
-      text-align: center;
-      padding: 120px 20px 80px;
-    }
+/* SECTIONS */
+.section {
+  padding: 100px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-    .hero p {
-      max-width: 600px;
-      margin: 20px auto;
-    }
+/* CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 30px;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
+.card {
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateY(40px);
+}
 
-    .card {
-      background: #111;
-      padding: 30px;
-      border-radius: 12px;
-      border: 1px solid #1f1f1f;
-    }
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    .card h3 {
-      margin-bottom: 10px;
-    }
+.card:hover {
+  transform: translateY(-5px);
+  border: 1px solid #333;
+}
 
-    .section {
-      border-top: 1px solid #1a1a1a;
-    }
+/* CALENDLY */
+#calendly {
+  margin-top: 50px;
+  height: 700px;
+}
 
-    .highlight {
-      color: white;
-      font-weight: 600;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 40px;
-      color: #666;
-      font-size: 14px;
-      border-top: 1px solid #1a1a1a;
-    }
-  </style>
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <h1>Recrutez les bons profils.<br>Pas juste des CV.</h1>
-
-      <p>
-        Je suis Axel Gromer, recruteur indépendant spécialisé Retail & Grande Distribution.
-        J’aide les entreprises à recruter vite, efficacement, et avec impact business.
-      </p>
-
-      <a class="btn btn-primary" href="https://calendly.com/axelgrmr/30min" target="_blank">
-        Prendre rendez-vous
-      </a>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section class="section">
-    <div class="container">
-      <h2>Mes expertises</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Recrutement au succès</h3>
-          <p>
-            Sourcing, qualification, closing : je m’occupe de tout.
-            Vous recrutez uniquement quand c’est signé.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>RPO</h3>
-          <p>
-            Externalisez votre recrutement.
-            Je m’intègre directement dans vos équipes comme un vrai partenaire.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Structuration</h3>
-          <p>
-            Optimisation de vos process, marque employeur et expérience candidat.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VALUE -->
-  <section class="section">
-    <div class="container">
-      <h2>Pourquoi GMR Talent</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Double expertise</h3>
-          <p>
-            6 ans en recrutement + 4 ans terrain retail.
-            Je comprends vos enjeux business, pas juste RH.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Rapidité</h3>
-          <p>
-            Moins de profils inutiles.
-            Plus de candidats pertinents.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Flexibilité</h3>
-          <p>
-            Mission ponctuelle ou accompagnement long terme.
-            Vous gardez le contrôle.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section class="section">
-    <div class="container">
-      <h2>Comment ça fonctionne</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>1. Cadrage</h3>
-          <p>On définit précisément votre besoin et votre contexte.</p>
-        </div>
-
-        <div class="card">
-          <h3>2. Sourcing</h3>
-          <p>Je cible et approche les meilleurs profils du marché.</p>
-        </div>
-
-        <div class="card">
-          <h3>3. Sélection</h3>
-          <p>Vous recevez uniquement des candidats qualifiés.</p>
-        </div>
-
-        <div class="card">
-          <h3>4. Closing</h3>
-          <p>Je vous accompagne jusqu’à la signature.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section">
-    <div class="container" style="text-align:center;">
-      <h2>Un recrutement à lancer ?</h2>
-      <p>
-        Parlons de votre besoin et voyons comment avancer rapidement.
-      </p>
-
-      <a class="btn btn-primary" href="https://calendly.com/axelgrmr/30min" target="_blank">
-        Réserver un call
-      </a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    © GMR Talent — Axel Gromer
+<nav>
+  <div>GMR Talent</div>
+  <div>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
   </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <h1>Recrutez les bons profils.<br>Pas juste des CV.</h1>
+    <p>Recruteur indépendant spécialisé Retail & Grande Distribution</p>
+    <div class="btn" onclick="scrollToCalendly()">Prendre rendez-vous</div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <h2>Mes expertises</h2>
+  <div class="grid">
+    <div class="card">Recrutement au succès</div>
+    <div class="card">RPO</div>
+    <div class="card">Conseil & structuration</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Pourquoi moi</h2>
+  <div class="grid">
+    <div class="card">6 ans en recrutement</div>
+    <div class="card">4 ans terrain retail</div>
+    <div class="card">Approche rapide & qualitative</div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <h2>Prendre rendez-vous</h2>
+
+  <!-- Calendly inline -->
+  <div id="calendly"></div>
+</section>
+
+<footer>
+  © GMR Talent — Axel Gromer
+</footer>
+
+<script>
+/* ANIMATION SCROLL */
+const cards = document.querySelectorAll('.card');
+
+window.addEventListener('scroll', () => {
+  cards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 100) {
+      card.classList.add('visible');
+    }
+  });
+});
+
+/* CALENDLY */
+Calendly.initInlineWidget({
+  url: 'https://calendly.com/axelgrmr/30min',
+  parentElement: document.getElementById('calendly')
+});
+
+/* SCROLL */
+function scrollToCalendly(){
+  document.getElementById('contact').scrollIntoView();
+}
+</script>
 
 </body>
 </html>
