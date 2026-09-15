@@ -1,210 +1,35 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GMR Recrutement accompagne les marques et enseignes dans leurs recrutements retail, du vendeur au management régional.">
-  <meta name="theme-color" content="#111111">
-  <title>GMR Recrutement | Recrutement retail</title>
-
-  <link rel="preconnect" href="https://assets.calendly.com">
-  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" defer></script>
-
-  <style>
-    :root { --ink:#111; --muted:#66615b; --paper:#f5f1ea; --white:#fffdf9; --line:#ddd6cc; --accent:#e85d04; --max:1180px; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--paper); color:var(--ink); font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.55; }
-    a { color:inherit; }
-    a:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
-    .wrap { width:min(var(--max),calc(100% - 48px)); margin:0 auto; }
-    .nav { position:sticky; top:0; z-index:20; background:rgba(245,241,234,.92); backdrop-filter:blur(14px); border-bottom:1px solid rgba(17,17,17,.08); }
-    .nav-inner { min-height:78px; display:flex; align-items:center; justify-content:space-between; gap:28px; }
-    .logo { text-decoration:none; font-size:17px; font-weight:800; letter-spacing:-.04em; }
-    .nav-links { display:flex; gap:28px; font-size:14px; }
-    .nav-links a { text-decoration:none; color:var(--muted); transition:color .2s ease; }
-    .nav-links a:hover { color:var(--ink); }
-    .nav-cta,.hero-cta { display:inline-flex; align-items:center; justify-content:center; text-decoration:none; background:var(--ink); color:white; border-radius:999px; font-weight:700; transition:transform .2s ease,background .2s ease; }
-    .nav-cta { padding:11px 18px; font-size:14px; }
-    .hero-cta { padding:15px 22px; font-size:15px; }
-    .nav-cta:hover,.hero-cta:hover { transform:translateY(-2px); background:var(--accent); }
-    .hero { padding:110px 0 92px; }
-    .eyebrow { display:inline-flex; align-items:center; gap:9px; margin-bottom:28px; font-size:12px; font-weight:800; letter-spacing:.13em; text-transform:uppercase; color:var(--muted); }
-    .eyebrow::before { content:""; width:8px; height:8px; border-radius:50%; background:var(--accent); }
-    h1 { max-width:920px; margin:0; font-size:clamp(52px,8vw,108px); line-height:.94; letter-spacing:-.065em; font-weight:800; }
-    .hero-copy { display:grid; grid-template-columns:minmax(0,680px) 1fr; gap:48px; align-items:end; margin-top:48px; }
-    .hero-copy p { max-width:650px; margin:0; color:var(--muted); font-size:19px; line-height:1.55; }
-    .hero-side { justify-self:end; text-align:right; }
-    .hero-side strong { display:block; font-size:14px; }
-    .hero-side span { display:block; margin-top:5px; color:var(--muted); font-size:13px; }
-    .hero-action { margin-top:28px; }
-    .marquee { border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); overflow:hidden; white-space:nowrap; }
-    .marquee-track { display:inline-flex; gap:42px; padding:17px 0; font-size:12px; font-weight:800; letter-spacing:.11em; text-transform:uppercase; }
-    .marquee-track span::after { content:"✦"; margin-left:42px; color:var(--accent); }
-    section { scroll-margin-top:100px; }
-    .section { padding:110px 0; }
-    .section-head { display:grid; grid-template-columns:1fr 1.5fr; gap:40px; margin-bottom:55px; }
-    .section-label { color:var(--accent); font-size:13px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
-    h2 { margin:0; font-size:clamp(38px,5vw,68px); line-height:1; letter-spacing:-.055em; }
-    .experience { background:var(--ink); color:white; }
-    .experience .section-label { color:#ff8a3d; }
-    .experience-grid { display:grid; grid-template-columns:1.35fr .65fr; gap:80px; align-items:end; }
-    .experience-lead { max-width:730px; font-size:26px; line-height:1.35; letter-spacing:-.025em; }
-    .stats { display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:55px; }
-    .stat { border-top:1px solid #393939; padding-top:18px; }
-    .stat-number { font-size:43px; font-weight:800; letter-spacing:-.05em; }
-    .stat-label { color:#aaa49c; font-size:13px; }
-    .path { border-left:1px solid #393939; padding-left:28px; color:#aaa49c; font-size:14px; line-height:1.8; }
-    .path strong { color:white; font-size:18px; display:block; margin-bottom:14px; }
-    .services { background:var(--white); }
-    .service-list { border-top:1px solid var(--line); }
-    .service { display:grid; grid-template-columns:80px 1fr auto; gap:28px; align-items:center; padding:30px 0; border-bottom:1px solid var(--line); }
-    .service-number { color:var(--accent); font-size:13px; font-weight:800; }
-    .service h3 { margin:0; font-size:27px; letter-spacing:-.03em; }
-    .service p { margin:5px 0 0; color:var(--muted); font-size:14px; }
-    .service-tag { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.08em; }
-    .method-grid { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--ink); }
-    .method { padding:28px 22px 10px 0; border-right:1px solid var(--line); margin-right:22px; min-height:220px; }
-    .method:last-child { border-right:0; margin-right:0; }
-    .method-num { color:var(--accent); font-weight:800; font-size:13px; }
-    .method h3 { font-size:24px; margin:35px 0 10px; letter-spacing:-.03em; }
-    .method p { color:var(--muted); font-size:14px; margin:0; }
-    .cta-section { padding:100px 0 120px; }
-    .cta-box { background:var(--accent); color:white; padding:clamp(38px,7vw,78px); border-radius:28px; display:grid; grid-template-columns:1.5fr .5fr; gap:50px; align-items:end; }
-    .cta-box h2 { max-width:780px; }
-    .cta-box p { max-width:620px; margin:25px 0 0; font-size:17px; opacity:.9; }
-    .cta-button { justify-self:end; padding:15px 22px; border-radius:999px; background:white; color:var(--ink); text-decoration:none; font-weight:800; transition:transform .2s ease; }
-    .cta-button:hover { transform:translateY(-2px); }
-    .booking { background:var(--white); }
-    .booking-head { display:flex; justify-content:space-between; gap:30px; align-items:end; margin-bottom:40px; }
-    .booking-head p { max-width:430px; margin:0; color:var(--muted); }
-    #calendly { min-height:720px; }
-    footer { border-top:1px solid var(--line); padding:28px 0; color:var(--muted); font-size:12px; }
-    .footer-inner { display:flex; justify-content:space-between; gap:20px; }
-    @media (max-width:800px) {
-      .wrap { width:min(var(--max),calc(100% - 32px)); }
-      .nav-inner { min-height:68px; }
-      .nav-links { display:none; }
-      .nav-cta { padding:10px 14px; }
-      .hero { padding:72px 0 64px; }
-      h1 { font-size:clamp(50px,15vw,78px); }
-      .hero-copy,.section-head,.experience-grid,.cta-box { grid-template-columns:1fr; gap:28px; }
-      .hero-copy { margin-top:35px; }
-      .hero-copy p { font-size:17px; }
-      .hero-side { justify-self:start; text-align:left; }
-      .section { padding:75px 0; }
-      .section-head { margin-bottom:38px; }
-      .experience-lead { font-size:21px; }
-      .stats { margin-top:35px; }
-      .service { grid-template-columns:45px 1fr; gap:14px; }
-      .service-tag { grid-column:2; }
-      .method-grid { grid-template-columns:1fr 1fr; }
-      .method { min-height:200px; }
-      .cta-section { padding:70px 0; }
-      .cta-button { justify-self:start; }
-      .booking-head { display:block; }
-      .booking-head p { margin-top:18px; }
-      #calendly { min-height:680px; }
-      .footer-inner { flex-direction:column; }
-    }
-    @media (max-width:500px) {
-      .nav-cta { font-size:12px; }
-      .stats,.method-grid { grid-template-columns:1fr; }
-      .method { border-right:0; border-bottom:1px solid var(--line); margin:0; padding-right:0; }
-      .method:last-child { border-bottom:0; }
-      .cta-box { border-radius:20px; }
-    }
-    @media (prefers-reduced-motion:reduce) {
-      html { scroll-behavior:auto; }
-      *,*::before,*::after { transition:none !important; }
-    }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GMR Recrutement accompagne les marques et enseignes dans leurs recrutements retail, du vendeur au management régional.">
+<meta name="theme-color" content="#111111"><title>GMR Recrutement | Recrutement retail</title>
+<link rel="preconnect" href="https://assets.calendly.com">
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" defer></script>
+<style>
+:root{--ink:#111;--muted:#66615b;--paper:#f5f1ea;--white:#fffdf9;--line:#ddd6cc;--accent:#e85d04;--max:1180px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}a{color:inherit}a:focus-visible{outline:3px solid var(--accent);outline-offset:4px}.wrap{width:min(var(--max),calc(100% - 48px));margin:0 auto}
+.nav{position:sticky;top:0;z-index:20;background:rgba(245,241,234,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(17,17,17,.08)}.nav-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}.logo{text-decoration:none;font-size:17px;font-weight:800;letter-spacing:-.04em}.nav-links{display:flex;gap:28px;font-size:14px}.nav-links a{text-decoration:none;color:var(--muted);transition:color .2s ease}.nav-links a:hover{color:var(--ink)}.nav-cta,.hero-cta{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:var(--ink);color:white;border-radius:999px;font-weight:700;transition:transform .2s ease,background .2s ease}.nav-cta{padding:11px 18px;font-size:14px}.hero-cta{padding:15px 22px;font-size:15px}.nav-cta:hover,.hero-cta:hover{transform:translateY(-2px);background:var(--accent)}
+.hero{padding:110px 0 92px}.eyebrow{display:inline-flex;align-items:center;gap:9px;margin-bottom:28px;font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}h1{max-width:920px;margin:0;font-size:clamp(52px,8vw,108px);line-height:.94;letter-spacing:-.065em;font-weight:800}.hero-copy{display:grid;grid-template-columns:minmax(0,680px) 1fr;gap:48px;align-items:end;margin-top:48px}.hero-copy p{max-width:650px;margin:0;color:var(--muted);font-size:19px;line-height:1.55}.hero-side{justify-self:end;text-align:right}.hero-side-label{display:block;margin-bottom:9px;color:var(--accent);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}.hero-side strong{display:block;font-size:16px;line-height:1.35}.hero-side span{display:block;margin-top:7px;color:var(--muted);font-size:14px}.hero-action{margin-top:28px}
+.marquee{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);overflow:hidden;white-space:nowrap}.marquee-track{display:inline-flex;gap:42px;padding:17px 0;font-size:12px;font-weight:800;letter-spacing:.11em;text-transform:uppercase}.marquee-track span:after{content:"✦";margin-left:42px;color:var(--accent)}section{scroll-margin-top:100px}.section{padding:110px 0}.section-head{display:grid;grid-template-columns:1fr 1.5fr;gap:40px;margin-bottom:55px}.section-label{color:var(--accent);font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}h2{margin:0;font-size:clamp(38px,5vw,68px);line-height:1;letter-spacing:-.055em}
+.experience{background:var(--ink);color:white}.experience .section-label{color:#ff8a3d}.experience-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:80px;align-items:end}.experience-lead{max-width:730px;font-size:26px;line-height:1.35;letter-spacing:-.025em}.stats{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:55px}.stat{border-top:1px solid #393939;padding-top:18px}.stat-number{font-size:43px;font-weight:800;letter-spacing:-.05em}.stat-label{color:#aaa49c;font-size:13px}.path{border-left:1px solid #393939;padding-left:28px;color:#aaa49c;font-size:14px;line-height:1.8}.path strong{color:white;font-size:18px;display:block;margin-bottom:14px}
+.services{background:var(--white)}.service-list{border-top:1px solid var(--line)}.service{display:grid;grid-template-columns:80px 1fr auto;gap:28px;align-items:center;padding:30px 0;border-bottom:1px solid var(--line)}.service-number{color:var(--accent);font-size:13px;font-weight:800}.service h3{margin:0;font-size:27px;letter-spacing:-.03em}.service p{margin:5px 0 0;color:var(--muted);font-size:14px}.service-tag{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.08em}.method-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}.method{padding:28px 22px 10px 0;border-right:1px solid var(--line);margin-right:22px;min-height:220px}.method:last-child{border-right:0;margin-right:0}.method-num{color:var(--accent);font-weight:800;font-size:13px}.method h3{font-size:24px;margin:35px 0 10px;letter-spacing:-.03em}.method p{color:var(--muted);font-size:14px;margin:0}
+.cta-section{padding:100px 0 120px}.cta-box{background:var(--accent);color:white;padding:clamp(38px,7vw,78px);border-radius:28px;display:grid;grid-template-columns:1.5fr .5fr;gap:50px;align-items:end}.cta-box h2{max-width:780px}.cta-box p{max-width:620px;margin:25px 0 0;font-size:17px;opacity:.9}.cta-button{justify-self:end;padding:15px 22px;border-radius:999px;background:white;color:var(--ink);text-decoration:none;font-weight:800;transition:transform .2s ease}.cta-button:hover{transform:translateY(-2px)}.booking{background:var(--white)}.booking-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:40px}.booking-head p{max-width:430px;margin:0;color:var(--muted)}#calendly{min-height:720px}footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:800px){.wrap{width:min(var(--max),calc(100% - 32px))}.nav-inner{min-height:68px}.nav-links{display:none}.nav-cta{padding:10px 14px}.hero{padding:72px 0 64px}h1{font-size:clamp(50px,15vw,78px)}.hero-copy,.section-head,.experience-grid,.cta-box{grid-template-columns:1fr;gap:28px}.hero-copy{margin-top:35px}.hero-copy p{font-size:17px}.hero-side{justify-self:start;text-align:left}.section{padding:75px 0}.section-head{margin-bottom:38px}.experience-lead{font-size:21px}.stats{margin-top:35px}.service{grid-template-columns:45px 1fr;gap:14px}.service-tag{grid-column:2}.method-grid{grid-template-columns:1fr 1fr}.method{min-height:200px}.cta-section{padding:70px 0}.cta-button{justify-self:start}.booking-head{display:block}.booking-head p{margin-top:18px}#calendly{min-height:680px}.footer-inner{flex-direction:column}}
+@media(max-width:500px){.nav-cta{font-size:12px}.stats,.method-grid{grid-template-columns:1fr}.method{border-right:0;border-bottom:1px solid var(--line);margin:0;padding-right:0}.method:last-child{border-bottom:0}.cta-box{border-radius:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
 </head>
 <body>
-  <nav class="nav" aria-label="Navigation principale">
-    <div class="wrap nav-inner">
-      <a class="logo" href="#top" aria-label="GMR Recrutement — accueil">GMR Recrutement</a>
-      <div class="nav-links">
-        <a href="#expertise">Expertise</a>
-        <a href="#services">Services</a>
-        <a href="#approche">Approche</a>
-      </div>
-      <a class="nav-cta" href="https://calendly.com/axelgrmr/30min" target="_blank" rel="noopener">Parlons recrutement</a>
-    </div>
-  </nav>
-
-  <main id="top">
-    <header class="wrap hero">
-      <div class="eyebrow">GMR Recrutement · Retail</div>
-      <h1>Le retail, je ne le recrute pas depuis un bureau.</h1>
-      <div class="hero-copy">
-        <div>
-          <p>GMR accompagne les marques et enseignes dans leurs recrutements retail, du vendeur au management régional. Une approche simple : comprendre le terrain avant de chercher le bon profil.</p>
-          <div class="hero-action"><a class="hero-cta" href="https://calendly.com/axelgrmr/30min" target="_blank" rel="noopener">Parlons de votre recrutement&nbsp; →</a></div>
-        </div>
-        <div class="hero-side"><strong>Vendeur · Responsable Boutique</strong><span>Adjoint · Area Manager · Regional Manager</span></div>
-      </div>
-    </header>
-
-    <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Retail</span><span>Management</span><span>Ouvertures</span><span>Multi-sites</span><span>Approche directe</span><span>Retail</span><span>Management</span></div></div>
-
-    <section id="expertise" class="experience section">
-      <div class="wrap">
-        <div class="section-head"><div class="section-label">01 · Le terrain</div><h2>Avant de recruter pour le retail, je l’ai vécu.</h2></div>
-        <div class="experience-grid">
-          <div>
-            <p class="experience-lead">J’ai travaillé en boutique, managé des équipes et connu les réalités du commerce avant de passer aux RH et au recrutement. <strong>Aujourd’hui, je réunis ces expériences chez GMR.</strong></p>
-            <div class="stats"><div class="stat"><div class="stat-number">50+</div><div class="stat-label">collaborateurs managés</div></div><div class="stat"><div class="stat-number">Montréal → France</div><div class="stat-label">expérience retail internationale</div></div></div>
-          </div>
-          <div class="path"><strong>Retail → Management → RH → Recrutement</strong>Une expérience terrain qui permet de regarder un recrutement autrement : pas seulement à travers un CV, mais à travers le magasin, le manager, l’équipe et les contraintes du quotidien.</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="services" class="services section">
-      <div class="wrap">
-        <div class="section-head"><div class="section-label">02 · Expertise</div><h2>Des recrutements pensés pour la réalité du magasin.</h2></div>
-        <div class="service-list">
-          <article class="service"><div class="service-number">01</div><div><h3>Équipes boutique</h3><p>Vendeurs, conseillers de vente, adjoints et responsables boutique.</p></div><div class="service-tag">Retail</div></article>
-          <article class="service"><div class="service-number">02</div><div><h3>Management retail</h3><p>Responsables, Area Managers, Regional Managers et management multi-sites.</p></div><div class="service-tag">Management</div></article>
-          <article class="service"><div class="service-number">03</div><div><h3>Ouvertures & croissance</h3><p>Constitution d’équipes, ouvertures de boutiques et renforts sur des phases de développement.</p></div><div class="service-tag">Croissance</div></article>
-        </div>
-      </div>
-    </section>
-
-    <section id="approche" class="section">
-      <div class="wrap">
-        <div class="section-head"><div class="section-label">03 · Approche</div><h2>Pas de CV envoyés au hasard.</h2></div>
-        <div class="method-grid">
-          <article class="method"><div class="method-num">01</div><h3>Comprendre</h3><p>Le poste, le magasin, le manager, l’équipe et les contraintes terrain.</p></article>
-          <article class="method"><div class="method-num">02</div><h3>Chercher</h3><p>Approche directe, sourcing ciblé et réseau plutôt qu’une simple diffusion d’annonce.</p></article>
-          <article class="method"><div class="method-num">03</div><h3>Évaluer</h3><p>Expérience, potentiel, contexte et adéquation avec l’environnement de travail.</p></article>
-          <article class="method"><div class="method-num">04</div><h3>Accompagner</h3><p>Du premier échange à la prise de poste, avec un suivi qui ne s’arrête pas à la signature.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-section">
-      <div class="wrap"><div class="cta-box"><div><div class="section-label" style="color:#fff;opacity:.75;">Un recrutement qui bloque ?</div><h2>Envoyez-moi le poste + la ville.</h2><p>Je vous dirai simplement si GMR peut vous aider — sans vous vendre une solution dont vous n’avez pas besoin.</p></div><a class="cta-button" href="https://calendly.com/axelgrmr/30min" target="_blank" rel="noopener">Prendre 30 min&nbsp; →</a></div></div>
-    </section>
-
-    <section id="contact" class="booking section">
-      <div class="wrap">
-        <div class="booking-head"><div><div class="section-label">04 · Contact</div><h2>Parlons-en.</h2></div><p>30 minutes pour comprendre votre besoin, le contexte et voir si GMR est la bonne solution.</p></div>
-        <div id="calendly" aria-label="Prise de rendez-vous"></div>
-      </div>
-    </section>
-  </main>
-
-  <footer><div class="wrap footer-inner"><span>© 2026 GMR Recrutement</span><span>Recrutement retail · France</span></div></footer>
-
-  <script>
-    window.addEventListener('load', function () {
-      if (window.Calendly) {
-        Calendly.initInlineWidget({ url:'https://calendly.com/axelgrmr/30min', parentElement:document.getElementById('calendly') });
-      }
-    });
-  </script>
-</body>
-</html>
+<nav class="nav" aria-label="Navigation principale"><div class="wrap nav-inner"><a class="logo" href="#top" aria-label="GMR Recrutement — accueil">GMR Recrutement</a><div class="nav-links"><a href="#expertise">Expertise</a><a href="#services">Services</a><a href="#approche">Approche</a></div><a class="nav-cta" href="https://calendly.com/axelgrmr/debrief-recrutement" target="_blank" rel="noopener">Parlons recrutement</a></div></nav>
+<main id="top">
+<header class="wrap hero"><div class="eyebrow">GMR Recrutement · Retail</div><h1>Le retail, je ne le recrute pas depuis un bureau.</h1><div class="hero-copy"><div><p>GMR accompagne les marques et enseignes dans leurs recrutements retail, du vendeur au management régional. Une approche simple : comprendre le terrain avant de chercher le bon profil.</p><div class="hero-action"><a class="hero-cta" href="https://calendly.com/axelgrmr/debrief-recrutement" target="_blank" rel="noopener">Parlons de votre recrutement&nbsp; →</a></div></div><div class="hero-side"><div class="hero-side-label">Profils recrutés</div><strong>Vendeur · Responsable Boutique</strong><span>Adjoint · Area Manager · Regional Manager</span></div></div></header>
+<div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Retail</span><span>Management</span><span>Ouvertures</span><span>Multi-sites</span><span>Approche directe</span><span>Retail</span><span>Management</span></div></div>
+<section id="expertise" class="experience section"><div class="wrap"><div class="section-head"><div class="section-label">01 · Le terrain</div><h2>Avant de recruter pour le retail, je l’ai vécu.</h2></div><div class="experience-grid"><div><p class="experience-lead">J’ai travaillé en boutique, managé des équipes et connu les réalités du commerce avant de passer aux RH et au recrutement. <strong>Aujourd’hui, je réunis ces expériences chez GMR.</strong></p><div class="stats"><div class="stat"><div class="stat-number">50+</div><div class="stat-label">collaborateurs managés</div></div><div class="stat"><div class="stat-number">Montréal → France</div><div class="stat-label">expérience retail internationale</div></div></div></div><div class="path"><strong>Retail → Management → RH → Recrutement</strong>Une expérience terrain qui permet de regarder un recrutement autrement : pas seulement à travers un CV, mais à travers le magasin, le manager, l’équipe et les contraintes du quotidien.</div></div></div></section>
+<section id="services" class="services section"><div class="wrap"><div class="section-head"><div class="section-label">02 · Expertise</div><h2>Des recrutements pensés pour la réalité du magasin.</h2></div><div class="service-list"><article class="service"><div class="service-number">01</div><div><h3>Équipes boutique</h3><p>Vendeurs, conseillers de vente, adjoints et responsables boutique.</p></div><div class="service-tag">Retail</div></article><article class="service"><div class="service-number">02</div><div><h3>Management retail</h3><p>Responsables, Area Managers, Regional Managers et management multi-sites.</p></div><div class="service-tag">Management</div></article><article class="service"><div class="service-number">03</div><div><h3>Ouvertures & croissance</h3><p>Constitution d’équipes, ouvertures de boutiques et renforts sur des phases de développement.</p></div><div class="service-tag">Croissance</div></article></div></div></section>
+<section id="approche" class="section"><div class="wrap"><div class="section-head"><div class="section-label">03 · Approche</div><h2>Pas de CV envoyés au hasard.</h2></div><div class="method-grid"><article class="method"><div class="method-num">01</div><h3>Comprendre</h3><p>Le poste, le magasin, le manager, l’équipe et les contraintes terrain.</p></article><article class="method"><div class="method-num">02</div><h3>Chercher</h3><p>Approche directe, sourcing ciblé et réseau plutôt qu’une simple diffusion d’annonce.</p></article><article class="method"><div class="method-num">03</div><h3>Évaluer</h3><p>Expérience, potentiel, contexte et adéquation avec l’environnement de travail.</p></article><article class="method"><div class="method-num">04</div><h3>Accompagner</h3><p>Du premier échange à la prise de poste, avec un suivi qui ne s’arrête pas à la signature.</p></article></div></div></section>
+<section class="cta-section"><div class="wrap"><div class="cta-box"><div><div class="section-label" style="color:#fff;opacity:.75">Un recrutement qui bloque ?</div><h2>Envoyez-moi le poste + la ville.</h2><p>Je vous dirai simplement si GMR peut vous aider — sans vous vendre une solution dont vous n’avez pas besoin.</p></div><a class="cta-button" href="https://calendly.com/axelgrmr/debrief-recrutement" target="_blank" rel="noopener">Prendre 30 min&nbsp; →</a></div></div></section>
+<section id="contact" class="booking section"><div class="wrap"><div class="booking-head"><div><div class="section-label">04 · Contact</div><h2>Parlons-en.</h2></div><p>30 minutes pour comprendre votre besoin, le contexte et voir si GMR est la bonne solution.</p></div><div id="calendly" aria-label="Prise de rendez-vous"></div></div></section>
+</main><footer><div class="wrap footer-inner"><span>© 2026 GMR Recrutement</span><span>Recrutement retail · France</span></div></footer>
+<script>window.addEventListener('load',function(){if(window.Calendly){Calendly.initInlineWidget({url:'https://calendly.com/axelgrmr/debrief-recrutement',parentElement:document.getElementById('calendly')});}});</script>
+</body></html>
